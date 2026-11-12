@@ -83,10 +83,10 @@ NeoForge 1.21.1 · `LGPL-3.0-or-later` · by **LvDriver** · mod id `letyoudespa
 ### 从源码构建
 
 ```bash
-./gradlew :ports:letyoudespawn:build
+./gradlew build
 ```
 
-产物：`ports/letyoudespawn/build/libs/letyoudespawn-1.0.0.jar`
+产物：`build/libs/letyoudespawn-1.0.0.jar`
 
 `libs/` 里的三个 jar 只用于编译和开发运行，不会打进产物：
 
@@ -96,7 +96,7 @@ NeoForge 1.21.1 · `LGPL-3.0-or-later` · by **LvDriver** · mod id `letyoudespa
 | `kotlinforforge-5.12.0-all.jar` | 仅 `localRuntime`（Fzzy Config 的运行期依赖） |
 | `kotlin-stdlib-2.0.21.jar` | `compileOnly`（javac 读 Kotlin 签名） |
 
-开发运行：`./gradlew :ports:letyoudespawn:runClient` / `:ports:letyoudespawn:runServer`
+开发运行：`./gradlew runClient` / `./gradlew runServer`
 
 ### 与上游 1.26.11.1 的差异
 
@@ -179,7 +179,7 @@ Minecraft **1.21.1**, NeoForge **21.1.218+**, Java 21. Fzzy Config 0.7.0+ is opt
 ### Building
 
 ```bash
-./gradlew :ports:letyoudespawn:build
+./gradlew build
 ```
 
 ### Licence and credits
