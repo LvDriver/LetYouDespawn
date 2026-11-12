@@ -1,0 +1,44 @@
+# NeoForge mod metadata. Curly-brace placeholders are expanded by generateModMetadata.
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="LvDriver"
+credits="Fork of Let Me Despawn 1.26.11.1 by frikinjay (LGPL-3.0-or-later). Almanac and DungeonConfig removed; Fzzy Config is optional."
+logoFile="icon.png"
+description='''
+Tweaks mob despawn rules so mobs do not become permanently persistent, while still dropping the gear they picked up.
+
+丢掉 Almanac 依赖的独立版本：生物捡起物品后仍能正常消失，消失时把捡到的装备丢出来；刷怪笼与试炼刷怪笼可单独开关。
+
+配置见 config/letyoudespawn.json；装有 Fzzy Config 时改用 config/letyoudespawn/config.toml 并提供游戏内配置界面。
+'''
+
+[[mixins]]
+config="letyoudespawn.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.218,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"
+
+# Optional: only used for the in-game configuration screen.
+[[dependencies.${mod_id}]]
+modId="fzzy_config"
+type="optional"
+versionRange="[0.7.0,)"
+ordering="NONE"
+side="BOTH"

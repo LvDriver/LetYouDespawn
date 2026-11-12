@@ -1,0 +1,20 @@
+{
+  "letyoudespawn.config": "Let You Despawn 设置",
+  "letyoudespawn.config.desc": "调整生物消失规则，避免生物仅仅因为捡起了物品就变成永久存在。",
+  "letyoudespawn.config.despawning": "消失规则",
+  "letyoudespawn.config.despawning.desc": "控制哪些生物可以消失，以及它们捡到的装备会怎么处理。",
+  "letyoudespawn.config.despawning.mobNames": "保持永久的生物",
+  "letyoudespawn.config.despawning.mobNames.desc": "这些生物捡起物品后仍会像原版一样变成永久存在（实体 id，例如 corpse:corpse）。",
+  "letyoudespawn.config.despawning.persistenceEnablers": "阻止消失的物品",
+  "letyoudespawn.config.despawning.persistenceEnablers.desc": "生物捡起并穿上这些物品后，本该消失时会被拦住（物品 id）。",
+  "letyoudespawn.config.despawning.pickOpen": "浏览并选择...",
+  "letyoudespawn.config.despawning.pickOpen.desc": "打开可搜索的列表，点一下就把它加入或移出上面的名单。",
+  "letyoudespawn.config.despawning.enableStandardSpawnerDespawn": "刷怪笼生物可消失",
+  "letyoudespawn.config.despawning.enableStandardSpawnerDespawn.desc": "让刷怪笼生成的生物在捡起物品后仍然能消失，而不是被钉成永久存在。",
+  "letyoudespawn.config.despawning.enableTrialSpawnerDespawn": "试炼刷怪笼生物可消失",
+  "letyoudespawn.config.despawning.enableTrialSpawnerDespawn.desc": "同上，作用于试炼刷怪笼；只要刷怪笼还在统计这只生物，它就不会消失（这正是防挂机领奖的关键）。",
+  "letyoudespawn.picker.title": "选择条目",
+  "letyoudespawn.picker.search": "按名称或 id 搜索",
+  "letyoudespawn.picker.tab.mobs": "生物",
+  "letyoudespawn.picker.tab.items": "物品"
+}

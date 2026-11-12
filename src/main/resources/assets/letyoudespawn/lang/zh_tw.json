@@ -1,0 +1,20 @@
+{
+  "letyoudespawn.config": "Let You Despawn 設定",
+  "letyoudespawn.config.desc": "調整生物消失規則，避免生物只因為撿起物品就變成永久存在。",
+  "letyoudespawn.config.despawning": "消失規則",
+  "letyoudespawn.config.despawning.desc": "控制哪些生物可以消失，以及牠們撿到的裝備會怎麼處理。",
+  "letyoudespawn.config.despawning.mobNames": "保持永久的生物",
+  "letyoudespawn.config.despawning.mobNames.desc": "這些生物撿起物品後仍會像原版一樣變成永久存在（實體 id，例如 corpse:corpse）。",
+  "letyoudespawn.config.despawning.persistenceEnablers": "阻止消失的物品",
+  "letyoudespawn.config.despawning.persistenceEnablers.desc": "生物撿起並穿上這些物品後，該消失時會被攔住（物品 id）。",
+  "letyoudespawn.config.despawning.pickOpen": "瀏覽並選擇...",
+  "letyoudespawn.config.despawning.pickOpen.desc": "開啟可搜尋的清單，點一下即可將它加入或移出上方名單。",
+  "letyoudespawn.config.despawning.enableStandardSpawnerDespawn": "生怪磚生物可消失",
+  "letyoudespawn.config.despawning.enableStandardSpawnerDespawn.desc": "讓生怪磚生成的生物在撿起物品後仍能消失，而不是被固定成永久。",
+  "letyoudespawn.config.despawning.enableTrialSpawnerDespawn": "試煉生怪磚生物可消失",
+  "letyoudespawn.config.despawning.enableTrialSpawnerDespawn.desc": "同上，作用於試煉生怪磚；只要生怪磚還在統計這隻生物，牠就不會消失（這正是防掛機領獎的關鍵）。",
+  "letyoudespawn.picker.title": "選擇項目",
+  "letyoudespawn.picker.search": "依名稱或 id 搜尋",
+  "letyoudespawn.picker.tab.mobs": "生物",
+  "letyoudespawn.picker.tab.items": "物品"
+}

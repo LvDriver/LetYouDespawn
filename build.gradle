@@ -1,0 +1,91 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev'
+    id 'idea'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+// Mojang ships Java 21 to end users in 1.21.1, so mods should target Java 21.
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    runs {
+        client {
+            client()
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+// Allows a dependency to be present while developing without being published as required.
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    // Optional at runtime: provides the in-game config screen only (config/letyoudespawn/config.toml).
+    // Vendored in libs/ because we only need the API classes at compile time.
+    compileOnly files("libs/fzzy_config-0.7.7+fix1+1.21+neoforge.jar")
+    // Fzzy Config is written in Kotlin; javac needs the stdlib to read its signatures.
+    compileOnly files("libs/kotlin-stdlib-2.0.21.jar")
+    localRuntime files("libs/fzzy_config-0.7.7+fix1+1.21+neoforge.jar")
+    // Fzzy Config needs KotlinForForge at runtime; dev-only, never bundled.
+    localRuntime files("libs/kotlinforforge-5.12.0-all.jar")
+}
+
+// This block of code expands all declared replace properties in the specified resource targets.
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+// Metadata contains Chinese text; without this Gradle would read it with the platform charset.
+tasks.withType(ProcessResources).configureEach {
+    filteringCharset = 'UTF-8'
+}

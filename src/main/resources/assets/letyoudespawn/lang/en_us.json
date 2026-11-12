@@ -1,0 +1,20 @@
+{
+  "letyoudespawn.config": "Let You Despawn Settings",
+  "letyoudespawn.config.desc": "Tweak mob despawn rules so mobs do not become permanent just because they picked something up.",
+  "letyoudespawn.config.despawning": "Despawning",
+  "letyoudespawn.config.despawning.desc": "Controls which mobs may despawn, and what happens to the gear they picked up.",
+  "letyoudespawn.config.despawning.mobNames": "Mobs that stay persistent",
+  "letyoudespawn.config.despawning.mobNames.desc": "These mobs still become persistent after picking an item up, exactly like vanilla (entity ids, e.g. corpse:corpse).",
+  "letyoudespawn.config.despawning.persistenceEnablers": "Items that prevent despawning",
+  "letyoudespawn.config.despawning.persistenceEnablers.desc": "A mob that picked one of these up and is wearing it is kept alive when it would otherwise despawn (item ids).",
+  "letyoudespawn.config.despawning.pickOpen": "Browse and pick...",
+  "letyoudespawn.config.despawning.pickOpen.desc": "Open a searchable list; click a row to add it to, or remove it from, the lists above.",
+  "letyoudespawn.config.despawning.enableStandardSpawnerDespawn": "Spawner mobs can despawn",
+  "letyoudespawn.config.despawning.enableStandardSpawnerDespawn.desc": "Mobs spawned by a monster spawner can still despawn after picking something up, instead of being pinned as persistent.",
+  "letyoudespawn.config.despawning.enableTrialSpawnerDespawn": "Trial spawner mobs can despawn",
+  "letyoudespawn.config.despawning.enableTrialSpawnerDespawn.desc": "Same as above, for trial spawners; a mob still counted by its trial spawner never despawns, which is what stops idle reward farming.",
+  "letyoudespawn.picker.title": "Pick entries",
+  "letyoudespawn.picker.search": "Search by name or id",
+  "letyoudespawn.picker.tab.mobs": "Mobs",
+  "letyoudespawn.picker.tab.items": "Items"
+}

@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "package": "com.lvdriver.letyoudespawn.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "minVersion": "0.8",
+  "client": [],
+  "mixins": [
+    "ArmorItemMixin",
+    "BaseSpawnerMixin",
+    "EnderManMixin",
+    "MobAccessor",
+    "MobMixin",
+    "TrialSpawnerDataAccessor",
+    "TrialSpawnerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
