@@ -114,7 +114,6 @@ NeoForge 1.21.1 · `LGPL-3.0-or-later` · by **LvDriver** · mod id `letyoudespa
 
 - 原模组：**Let Me Despawn**，作者 **frikinjay** — <https://github.com/frikinjay/let-me-despawn>（LGPL-3.0）
 - 配置界面：**Fzzy Config**，作者 **fzzyhmstrs**
-- 图标：基于原模组图标，叠加被划掉的 Almanac 图标，表示"不再需要 Almanac"
 - 许可：**GNU Lesser General Public License v3.0 or later**，见 [LICENSE](LICENSE)
 
 本作品是上游 LGPL-3.0 代码的衍生作品，仓库内附完整源码。
